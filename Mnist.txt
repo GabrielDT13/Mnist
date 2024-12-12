@@ -1,0 +1,26 @@
+-En la primera parte del codigo importamos el dataset de mnist ya dado por torch.
+- Transformamos las imagenes porque está en escala de grises y tenemos que normalizarlo
+-Y hacemos dos tensores. Uno para el entrenamiento y otro para el test.
+
+-Ponemos cada variable con su entrenamiento y test respectivo.
+
+-Visualizams una imagen para ver el resultado despues del entrenamiento. Nos traemos una imagen aleatoria. Añadimos unas variables para la prediccion.
+
+- Vemos el tamaño de las imagenes.
+
+-Vamos a definir un modelo de mnist
+- En el constructor creamos las neuronas con las imagenes de 28x28 (784) y las pasamos a 512 neuronas, luego de 512 pasamos a 256 y finalmente sacamos de 256 a 10 neuronas porque son 10 tipos de clases (10 numeros del 0 al 9)
+
+- En el forward aplanamos la imagen y calculamos el error
+
+-Personalmente, quice hacer una predicción antes del entrenamiento para luego comprobar si se ha entrenado bien la red.
+
+-Definimos el criterio de pérdida y el optimizador.
+
+-Empezamos el entrenamiento, donde vamos a realizarlo 10 epocas, que basicamente es recorrer todas las filas 10 veces.
+-Inicializamos a 0 el gradiente y entrenamos el modelo con el conjunto de entrenamiento que creamos anteriormente.
+-Vemos la perdida
+
+- Evaluamos el modelo para ver el porcentaje de acierto que ha generado.
+- Y finalmente cuando evaluamos hacemos una prediccion para ver si realmente tenemos una gran precision y comprobamos que nos predice el mismo numero que anteriormente se había equivocado.
+
